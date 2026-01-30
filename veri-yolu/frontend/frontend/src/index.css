@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@tailwind/preflight;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9fa;
+  color: #22292f;
+}
+
+.bg-background {
+  background-color: #f7f9fa;
+}
+
+.text-primary {
+  color: #2563eb;
+}
+.bg-primary {
+  background-color: #2563eb;
+}
+.bg-primary.light {
+  background-color: #e0e7ff;
+}
+
+.border-primary {
+  border-color: #2563eb;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Utility for shadow */
+.shadow-lg {
+  box-shadow: 0 4px 24px 0 rgba(37, 99, 235, 0.08), 0 1.5px 4px 0 rgba(0,0,0,0.04);
+}
+
+/* Hide scrollbars for sidebar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f7f9fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e7ff;
+  border-radius: 8px;
+}

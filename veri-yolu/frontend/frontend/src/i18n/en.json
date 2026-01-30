@@ -1,0 +1,12 @@
+{
+  "login": "Login",
+  "register": "Register",
+  "email": "Email",
+  "password": "Password",
+  "submit": "Submit",
+  "switch_lang": "Switch to Turkish",
+  "profile": "Profile",
+  "role": "Role",
+  "user_id": "UserId",
+  "not_logged_in": "You must log in to view your profile information."
+}

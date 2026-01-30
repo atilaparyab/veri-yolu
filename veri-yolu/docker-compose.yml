@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend/frontend
+    volumes:
+      - ./frontend/frontend:/app
+    ports:
+      - "3000:3000"

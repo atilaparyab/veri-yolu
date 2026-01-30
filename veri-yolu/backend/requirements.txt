@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+python-multipart
+email-validator
+sqlmodel
+asyncpg
+passlib[bcrypt]
+python-jose[cryptography]
+aiofiles
+psycopg2-binary
+torch
+git+https://github.com/openai/CLIP.git
+onnxruntime
+cv2

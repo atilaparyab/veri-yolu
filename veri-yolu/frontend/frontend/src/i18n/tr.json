@@ -1,0 +1,13 @@
+{
+  "login": "Giriş Yap",
+  "register": "Kayıt Ol",
+  "email": "E-posta",
+  "password": "Şifre",
+  "submit": "Gönder",
+  "switch_lang": "İngilizceye geç",
+  "profile": "Profil",
+  "role": "Rol",
+  "user_id": "Kullanıcı ID",
+  "not_logged_in": "Profil bilgilerini görüntülemek için giriş yapmalısınız."
+  
+}
