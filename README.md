@@ -1,53 +1,67 @@
-Bu proje, Kaggle benzeri bir veri toplama ve etiketleme platformudur. React (Vite) ve FastAPI ile geliştirilmektedir.
+# 📊 VeriYolu – Veri Toplama ve Etiketleme Platformu
 
-🚀 Projeyi Çalıştırma Adımları (Geliştirici Kurulumu)
-📦 1. Gereksinimler
-Python 3.10+
-Node.js (npm dahil)
-PostgreSQL 15+
-🛠️ 2. PostgreSQL Ayarları
-PostgreSQL kurulumunda kullanıcı adı ve şifreyi aşağıdaki gibi ayarla:
+VeriYolu, Kaggle benzeri bir veri toplama, paylaşma ve etiketleme platformudur.  
+Proje, **React (Vite)** ve **FastAPI** kullanılarak geliştirilmiştir.
 
-Kullanıcı adı: postgres
-Şifre: postgres
-pgAdmin veya terminal ile yeni bir veritabanı oluştur:
+---
 
+## 🚀 Projeyi Çalıştırma (Geliştirici Kurulumu)
+
+### 📦 1. Gereksinimler
+
+- Python **3.10+**
+- Node.js (npm dahil)
+- PostgreSQL **15+**
+- Git (önerilir)
+
+---
+
+## 🛠️  Kurulum
+
+1. Yeni veritabanı oluşturun:
+
+```sql
 CREATE DATABASE veriyolu;
-🐍 3. Backend (FastAPI)
-backend/ dizinine gir:
+
+
+2. Ortam Değişkenleri (.env)
+
+Backend dizininde .env oluşturun:
+DATABASE_URL=postgresql://veriyolu_user:strong_password@localhost/veriyolu
+SECRET_KEY=your_secret_key_here
+
+
+3. Backend (FastAPI)
 
 cd backend
-Python bağımlılıklarını yükle:
-
 pip install -r requirements.txt
-.env dosyasını kontrol et. Aşağıdaki gibi olmalı:
-
-DATABASE_URL=postgresql://postgres:postgres@localhost/veriyolu
-Veritabanı tablolarını başlat:
-
 python scripts/init_db.py
-API sunucusunu başlat:
-
 uvicorn main:app --reload
-FastAPI Swagger arayüzü için: http://localhost:8000/docs
+http://localhost:8000/docs
 
-🌐 4. Frontend (React + Vite)
-frontend/frontend/ dizinine gir:
+
+4. Frontend (React + Vite)
 
 cd frontend/frontend
-Node modüllerini yükle:
-
 npm install
-Geliştirme sunucusunu başlat:
-
 npm run dev
-Frontend varsayılan olarak http://localhost:3000 adresinde çalışır.
+http://localhost:3000
 
-🧩 Notlar
-Her iki sunucu (frontend ve backend) paralel çalışmalıdır.
-Veritabanı ilk başlatıldığında boş olur, kullanıcı ve konu oluşturulması gerekir.
-React SPA olarak çalıştığı için refresh edilen sayfalar 404 hatası verebilir, bu normaldir.
-init db içinde var admin credintals:
-admin@veriyolu.com
 
-admin123
+5. Yönetici (Admin) Hesabı
+Varsayılan admin bilgileri bulunmaz.
+
+Oluşturmak için:
+python scripts/create_admin.py  veya Swagger kullanabilirsiniz.
+
+
+6. Kullanım Notları
+
+-Frontend ve backend birlikte çalışmalıdır.
+-İlk kurulumda veritabanı boştur.
+-Kullanıcı ve konu oluşturulmalıdır.
+-SPA nedeniyle refresh sonrası 404 görülebilir.
+-Production için Nginx önerilir.
+
+
+
