@@ -20,7 +20,7 @@ Proje, **React (Vite)** ve **FastAPI** kullanılarak geliştirilmiştir.
 
 1. Yeni veritabanı oluşturun:
 
-```sql
+
 CREATE DATABASE veriyolu;
 
 
